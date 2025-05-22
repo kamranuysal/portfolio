@@ -6,6 +6,8 @@ import Banner from "./components/Banner";
 import "animate.css";
 import Skills from "./components/Skills";
 import "react-circular-progressbar/dist/styles.css";
+import "react-multi-carousel/lib/styles.css";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
@@ -13,6 +15,7 @@ const App = () => {
       <NavBar />
       <Banner />
       <Skills />
+      <Contact />
     </Router>
   );
 };

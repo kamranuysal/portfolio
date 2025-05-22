@@ -3,6 +3,25 @@ import Carousel from "react-multi-carousel";
 import { CircularProgressbar } from "react-circular-progressbar";
 
 const Skills = () => {
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <section className="skill" id="skills">
       <Container>
@@ -16,7 +35,11 @@ const Skills = () => {
               content, style layouts, and implement interactivity essential for
               creating dynamic, user-friendly web applications.
             </p>
-            <Carousel>
+            <Carousel
+              infinite={true}
+              className="owl-carousel owl-theme skill-slider"
+              responsive={responsive}
+            >
               <div className="item">
                 <CircularProgressbar
                   value={70}
