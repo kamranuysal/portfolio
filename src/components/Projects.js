@@ -5,6 +5,9 @@ import Pizzeria from "../assets/img/Pizza Love.png";
 import CurrencyConverter from "../assets/img/currency exchanger.png";
 import AIBot from "../assets/img/code.png";
 import To_Do_App from "../assets/img/to-do-app.png";
+import figma from "../assets/img/figma.png";
+import TrackVisibility from "react-on-screen";
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
   const projects = [
@@ -45,9 +48,9 @@ const Projects = () => {
       url: "https://github.com/kamranuysal/To_Do_App",
     },
     {
-      title: "figma",
+      title: "Figma",
       description: "Development",
-      imgUrl: null,
+      imgUrl: figma,
       url: "https://www.figma.com/design/xVTxvw1EiVMJ076k6HTMkL/Untitled?node-id=0-1&t=u6WxQLmAQ1NKKHNb-1",
     },
   ];
@@ -56,9 +59,32 @@ const Projects = () => {
     <section className="project" id="projects">
       <Container>
         <Row>
-          <Col size={12}></Col>
+          <Col size={12}>
+            <h2>Projects</h2>
+            <p>
+              My name is kamranuysal, and I’m excited to present some of the
+              front-end development projects I’ve been working on. These
+              projects showcase my skills in HTML, CSS, and JavaScript—the core
+              technologies of modern web development.
+            </p>
+            <Row>
+              {projects.map((item, index) => {
+                return (
+                  <ProjectCard
+                    key={index}
+                    url={item.url}
+                    title={item.title}
+                    description={item.description}
+                    imgUrl={item.imgUrl}
+                  />
+                );
+              })}
+            </Row>
+          </Col>
         </Row>
       </Container>
     </section>
   );
 };
+
+export default Projects;

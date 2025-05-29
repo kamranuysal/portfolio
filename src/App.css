@@ -455,6 +455,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     var(--color-gradient-end) 111.58%
   );
   padding: 60px 0 200px 0;
+  height: 15%;
 }
 .contact img {
   width: 92%;
@@ -533,4 +534,78 @@ p.success {
 
 p.danger {
   color: var(--red);
+}
+
+/************ Footer Css ************/
+.footer {
+  padding: 0 0 50px 0;
+  background-image: url("./assets/img/footer-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer img {
+  width: 25%;
+}
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: var(gray);
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+.footer-bx {
+  background: var(--white);
+  border-radius: 55px;
+  color: var(--black);
+  padding: 70px 125px;
+  margin-bottom: 80px;
+  margin-top: -122px;
+}
+.footer-bx h3 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.2em;
+}
+.footer-bx button {
+  font-weight: 700;
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  padding: 20px 100px;
+  font-size: 18px;
+  border-radius: 0;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.footer-bx button span {
+  z-index: 1;
+  position: relative;
+}
+.footer-bx button:hover {
+  color: var(--white);
+}
+.footer-bx button::before {
+  content: "";
+  background: var(--black);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+.footer-bx button:hover::before {
+  width: 100%;
+}
+
+@media (max-width: 991px) {
+  .footer {
+    padding: 50px 0 50px 0;
+  }
+
+  .footer img {
+    margin-bottom: 50px;
+  }
 }
